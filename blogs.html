@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A5 Dev Board</title>
+    <!-- daisy UI and Tailwind cdn  -->
+ <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css" rel="stylesheet" type="text/css" />
+ <script src="https://cdn.tailwindcss.com"></script>
+      <!-- font awesome -->
+     <script src="https://kit.fontawesome.com/1e0e5c781d.js" crossorigin="anonymous"></script>
+</head>
+ 
+ 
+<body class="mx-14 my-5 bg-[#F4F7FF]">
+    <nav class="bg-white p-5 rounded-xl flex justify-between">
+      <!-- nav left side -->
+      <div class="gap-2 log flex items-center">
+        <img src="assets/logo.png" alt="" />
+        <h1 class="text-3xl font-light">
+          Dev<span class="font-bold">Board</span>
+        </h1>
+      </div>
+      <!-- nav right side -->
+      <div class="flex gap-5">
+        <button id="blog-back-btn" class="rounded-lg cursor-pointer p-2 bg-blue-600 text-white">
+          Back to Desk
+        </button>
+      </div>
+    </nav>
+    <div class="mt-5">
+      <h1 class="text-2xl font-bold text-center">Blogs</h1>
+    </div>
+    <section class="mt-5 flex flex-col gap-5">
+  
+      <div class="bg-white rounded-lg">
+        <div class=" border-b border-dashed border-gray-500 ">
+          <h1 class="p-5 text-xl font-bold">Question-1: What are the different ways to select an element in the DOM?</h1>
+        </div>
+        <div>
+          <P class="p-5 text-gray-400">By ID – getElementById,
+            By Class – getElementsByClassName,
+            By Tag Name – getElementsByTagName,
+            By Name Attribute – getElementsByName,
+            Using querySelector – Selects the first matching element,
+            Using querySelectorAll – Selects all matching elements.
+          </P>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg">
+        <div class=" border-b border-dashed border-gray-500 ">
+          <h1 class="p-5 text-xl font-bold">Question-2: What is the difference between innerHTML, innerText, and
+            textContent ?</h1>
+        </div>
+        <div>
+          <P class="p-5 text-gray-400">
+            innerHTML which gets or sets the HTML inside an element.
+            innerText which Gets or sets only the visible text.
+            textContent which Gets or sets all text inside an element.
+          </P>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg">
+        <div class=" border-b border-dashed border-gray-500 ">
+          <h1 class="p-5 text-xl font-bold">Question-3: What is event delegation in the DOM?</h1>
+        </div>
+        <div>
+          <P class="p-5 text-gray-400">Event delegation means adding an event listener to a parent element instead of its
+            children. When a child is clicked, the event "bubbles up" to the parent, which handles it. This is useful for
+            managing many elements efficiently.</P>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg">
+        <div class=" border-b border-dashed border-gray-500 ">
+          <h1 class="p-5 text-xl font-bold">Question-4: What is event bubbling in the DOM?</h1>
+        </div>
+        <div>
+          <P class="p-5 text-gray-400">Event bubbling is when an event starts from the target element and moves up to its
+            parent, grandparent, and so on. It allows parent elements to listen for events on their children.</P>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg">
+        <div class=" border-b border-dashed border-gray-500 ">
+          <h1 class="p-5 text-xl font-bold">Question-5: How do you create, add, and remove elements using JavaScript?</h1>
+        </div>
+        <div>
+          <P class="p-5 text-gray-400"> We can Create an element using document.createElement("tag"), then Add:
+            parent.appendChild(child) & then removing it with
+            Remove: parent.removeChild(child).</P>
+        </div>
+      </div>
+  
+    </section>
+  
+    <script>
+      document.getElementById("blog-back-btn").addEventListener("click", function (event) {
+        event.preventDefault();
+        console.log("hello");
+        window.location.href = "index.html";
+        });
+    </script>
+  </body>
+  
+</html>
